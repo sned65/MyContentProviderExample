@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cardview="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    cardview:cardCornerRadius="4dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:baselineAligned="false">
+
+        <LinearLayout
+            android:id="@+id/client_content"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="10"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/client_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                tools:text="John Dow"/>
+
+            <TableLayout
+                android:id="@+id/tbl_client_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TableRow
+                    android:layout_marginBottom="@dimen/client_attr_margin"
+                    android:layout_marginTop="@dimen/client_attr_margin">
+
+                    <TextView
+                        android:id="@+id/client_phone_label"
+                        android:paddingEnd="@dimen/client_attr_padding_end"
+                        android:paddingStart="@dimen/client_attr_padding_start"
+                        android:text="@string/client_phone"/>
+
+                    <TextView
+                        android:id="@+id/client_phone"
+                        tools:text="+7123456789"/>
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginBottom="@dimen/client_attr_margin"
+                    android:layout_marginTop="@dimen/client_attr_margin">
+
+                    <TextView
+                        android:id="@+id/client_email_label"
+                        android:paddingEnd="@dimen/client_attr_padding_end"
+                        android:paddingStart="@dimen/client_attr_padding_start"
+                        android:text="@string/client_email"/>
+
+                    <TextView
+                        android:id="@+id/client_email"
+                        tools:text="client@gmail.com"/>
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginBottom="@dimen/client_attr_margin"
+                    android:layout_marginTop="@dimen/client_attr_margin">
+
+                    <TextView
+                        android:id="@+id/client_social_label"
+                        android:paddingEnd="@dimen/client_attr_padding_end"
+                        android:paddingStart="@dimen/client_attr_padding_start"
+                        android:text="@string/client_social"/>
+
+                    <TextView android:id="@+id/client_social"/>
+                </TableRow>
+
+            </TableLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/client_btn_panel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/btn_edit_client"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                cardview:srcCompat="@drawable/ic_edit_black_24dp"
+                android:contentDescription="@string/edit"/>
+
+            <ImageButton
+                android:id="@+id/btn_remove_client"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                cardview:srcCompat="@drawable/ic_clear_black_24dp"
+                android:contentDescription="@string/remove"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
